@@ -41,6 +41,7 @@ class MainViewController: ViewController <MainViewBindable> {
         if let handelr = presenter?.selectedFilterDidChange {
             handelr(presenter?.selectedFilter.0, presenter?.selectedFilter.1, presenter?.selectedFilter.2)
         }
+        presenter?.requestBucketList?()
     }
     override func bind(_ binding: MainViewBindable) {
         self.presenter = binding
